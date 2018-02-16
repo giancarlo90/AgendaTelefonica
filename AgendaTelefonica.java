@@ -17,13 +17,25 @@ public class AgendaTelefonica
     {
         contactos = new HashMap<>();
     }
-
+    
+    /**
+     * Metodo para insertar contactos.
+     */
     public void enterNumber(String name, String number){
         contactos.put(name, number);
     }
-
+    
+    /**
+     * Metodo para devolver contactos por su clave.
+     */
     public String lookupNumber(String name){
-        String aDevolver = contactos.get(name);
-        return aDevolver;
+        return contactos.get(name);
+    }
+    
+    /**
+     * Print all keys
+     */
+    public void printAllNames(){
+        System.out.println(contactos.keySet());
     }
 }
